@@ -1,0 +1,23 @@
+h1 {
+  font-weight: 500;
+  font-size: 45px;
+  margin: 10px;
+}
+input {
+  width: 100%;
+}
+.todo-container {
+  text-align: center;
+}
+.items-container {
+  text-align: center;
+}
+.kd-row {
+  margin: 10px 5px;
+}
+.kd-btn {
+  width: 50%;
+}
+.container {
+  padding-top: 10px;
+}
