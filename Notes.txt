@@ -1,0 +1,3 @@
+- Key is only for virtual DOM not for element.
+- If I have data then using map I don't need to create UI multiple times.
+- 
