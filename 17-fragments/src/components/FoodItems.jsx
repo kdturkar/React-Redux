@@ -1,19 +1,12 @@
-const FoodItems = () => {
-  // let foodItems = [];
-  let foodItems = ["Dal", "Green Veggies", "Roti", "Salad", "Milk"];
+import Item from "./Item";
 
-  // if (foodItems.length > 0) {
-  //   return <h3>Lenght is &gt 0</h3>
-  // }
-
-  // let exprsn = foodItems.length > 0 ? null : <h3>Ohh Shitt..</h3>
-
+const FoodItems = (props) => {
+  let { items } = props;
   return (
     <ul className="list-group">
-      {foodItems.map((foodItem) => (
-        <li key={foodItem} className="list-group-item">
-          {foodItem}
-        </li>
+      {items.map((item) => (
+        // foodItem is kind of argument to Item component
+        <Item key={item} foodItem={item}></Item>
       ))}
     </ul>
   );

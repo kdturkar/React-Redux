@@ -4,12 +4,12 @@ import ErrorMsg from "./components/ErrorMsg";
 
 function App() {
   // let foodItems = [];
-  // let foodItems = ["Dal", "Green Veggies", "Roti", "Salad", "Milk"];
+  let foodItems = ["Dal", "Green Veggies", "Roti", "Salad", "Milk"];
   return (
     <>
       <h1>Healthy Food</h1>
-     <ErrorMsg></ErrorMsg>
-      <FoodItems></FoodItems>
+      <ErrorMsg items={foodItems}></ErrorMsg>
+      <FoodItems items={foodItems}></FoodItems>
     </>
   );
 }
