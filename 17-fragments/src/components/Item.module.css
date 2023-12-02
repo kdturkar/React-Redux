@@ -1,0 +1,11 @@
+.li-rw {
+    background: rgb(228, 219, 224);
+}
+.li-content {
+    font-weight: 700;
+}
+.list-group-item {
+    border: 3px solid green;
+    width: 50%;
+    border-radius: 20%;
+}

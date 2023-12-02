@@ -1,7 +1,6 @@
-const ErrorMsg = () => {
-  let foodItems = [];
-//   let foodItems = ["Dal", "Green Veggies", "Roti", "Salad", "Milk"];
+const ErrorMsg = (props) => {
+  let { items } = props;
 
-  return <>{foodItems.length === 0 && <h3>Err Msg Comp..</h3>}</>;
+  return <>{items.length === 0 && <h6>Err Msg Comp..</h6>}</>;
 };
 export default ErrorMsg;
