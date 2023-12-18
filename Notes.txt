@@ -2,5 +2,6 @@
 - If I have data then using map I don't need to create UI multiple times.
 - Falsy values: - Null, Undefined, empty, zero etc.
 - If I want to write JS code in jsx we write it inside {}.
+- Inline arrow functions are less efficient than separate functions in jsx.
 
 -- 17-fragments contains container children.
