@@ -1,11 +1,16 @@
 .li-rw {
-    background: rgb(228, 219, 224);
+    list-style: none;
 }
 .li-content {
     font-weight: 700;
+    color: orange;
 }
 .list-group-item {
-    border: 3px solid green;
-    width: 50%;
-    border-radius: 20%;
+    border-radius: 10px;
+    border: 1px solid #e1c983;
+    padding: 6px;
+}
+.buy-btn {
+    border-radius: 8px;
+    float: right;
 }
