@@ -5,5 +5,6 @@
 - Inline arrow functions are less efficient than separate functions in jsx.
 - Passing data via props from Parent -> Child.
 - Passing data via events from Child -> Parent.
+- Functional components are stateless by default, kyonki hame data store karne ke liye kuch suvidha hai nhi. So we use useState to store state, which we can use it if we need.
 
 -- 17-fragments contains container children.
