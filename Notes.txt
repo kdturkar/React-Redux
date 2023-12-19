@@ -3,5 +3,7 @@
 - Falsy values: - Null, Undefined, empty, zero etc.
 - If I want to write JS code in jsx we write it inside {}.
 - Inline arrow functions are less efficient than separate functions in jsx.
+- Passing data via props from Parent -> Child.
+- Passing data via events from Child -> Parent.
 
 -- 17-fragments contains container children.
