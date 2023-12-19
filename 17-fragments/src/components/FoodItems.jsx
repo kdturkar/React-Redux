@@ -12,7 +12,7 @@ const FoodItems = (props) => {
     <ul className="list-group">
       {items.map((item) => (
         // foodItem is kind of argument to Item component
-        <Item key={item} foodItem={item} handleBuyBtn= {
+        <Item key={item} foodItem={item} handleBuyBtn={
           () => {
             console.log(`Item bought ${item}`)
           }
