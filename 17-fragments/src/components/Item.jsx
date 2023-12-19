@@ -7,14 +7,15 @@ const Item = ({ foodItem }) => {
   // Array destructing
   // let {foodItem} = props;
 
-  const handleBuyBtn = (para) => {
-    console.log("Item bought " + para);
+  const handleBuyBtn = (event) => {
+    console.log(event);
+    console.log("Item bought " + foodItem);
   }
 
   return (
     <li className={`${styles["li-rw"]} ${styles["list-group-item"]}`}>
       <span className={styles["li-content"]}>{foodItem}</span>
-      <button type="button" onClick={() => handleBuyBtn(foodItem)} className={`${styles["buy-btn"]} btn btn-info`}>Buy</button>
+      <button type="button" onClick={(event) => handleBuyBtn(event)} className={`${styles["buy-btn"]} btn btn-info`}>Buy</button>
     </li>
   );
 };
