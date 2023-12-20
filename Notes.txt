@@ -7,4 +7,9 @@
 - Passing data via events from Child -> Parent.
 - Functional components are stateless by default, kyonki hame data store karne ke liye kuch suvidha hai nhi. So we use useState to store state, which we can use it if we need.
 
+# useState:-
+ - useState hook in returns an array with two elements.
+ - Ideally whatever value we get from useState it should be IMMUTABLE.
+
+
 -- 17-fragments contains container children.

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import FoodItems from "./components/FoodItems";
 import ErrorMsg from "./components/ErrorMsg";
 import Container from "./components/Container";
@@ -7,20 +7,34 @@ import FoodInput from "./components/FoodInput";
 
 function App() {
   // let foodItems = [];
-  let foodItems = ["Dal", "Green Veggies", "Roti", "Salad", "Milk"];
-  let textToShow = "Krunal";
+  // let foodItems = ["Dal", "Green Veggies", "Roti", "Salad", "Milk"];
 
-  const handleOnChange = (event) => {
-    console.log(event.target.value);
-    textToShow = event.target.value;
+  // let [textToShow, setTextToShow] = useState(); 
+
+  let [foodItems, setFoodItems] = useState([
+    "Dal", "Green Veggies", "Roti", "Salad", "Milk",
+  ]);
+
+  // console.log("After re-paint of component value of state is " + textToShow);
+
+
+  const onKeyDown = (e) => {
+    if(e.keyCode == '13'){
+      let newFoodItem = e.target.value;
+      let newItems = foodItems.
+      setFoodItems(newItems);
+      console.log(`Value entered is ${newFoodItem}`);
+
+    }
+    // setTextToShow(event.target.value);
   }
   return (
     <>
       <Container>
         <h1>Healthy Food</h1>
         <ErrorMsg items={foodItems}></ErrorMsg>
-        <FoodInput handleOnChange={handleOnChange}></FoodInput>
-        <p>{textToShow}</p>
+        <FoodInput handleKeyDown={onKeyDown}></FoodInput>
+        {/* <p>{textToShow}</p> */}
         <FoodItems items={foodItems}></FoodItems>
       </Container>
       {/* <Container>
