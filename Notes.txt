@@ -3,15 +3,28 @@
 - Falsy values: - Null, Undefined, empty, zero etc.
 - If I want to write JS code in jsx we write it inside {}.
 - Inline arrow functions are less efficient than separate functions in jsx.
+
+
+# States & Props:-
 - Passing data via props from Parent -> Child.
 - Passing data via events from Child -> Parent.
+
 - Functional components are stateless by default, kyonki hame data store karne ke liye kuch suvidha hai nhi. So we use useState to store state, which we can use it if we need.
+
+- Props to pass data.
+- States to store data.
+(Dono me re-render hota hai)
+
+- We can communicate from child -> parent by emiting events or callback functions or invoking functions using props; but we can manipulate props in child. (Child sirf data leta hai)
+- We can manipulate the state of parent components from child component by using callback functions passed as props.
+
 
 # useState:-
  - useState hook in returns an array with two elements.
  - Ideally whatever value we get from useState it should be IMMUTABLE.
  - When second element of useState array triggered then whole component gets re-paint.
  - Pulling the state up means kind of Hierarchial inheritance, jab parent comp paint honga toh uske bacche bhi repaint honge.
+
 
 
 -- 17-fragments contains container children.
