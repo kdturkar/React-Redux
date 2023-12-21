@@ -5,11 +5,6 @@
     font-weight: 700;
     color: orange;
 }
-.list-group-item {
-    border-radius: 10px;
-    border: 1px solid #e1c983;
-    padding: 6px;
-}
 .buy-btn {
     border-radius: 8px;
     float: right;

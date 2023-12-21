@@ -11,17 +11,17 @@ function App() {
 
   // let [textToShow, setTextToShow] = useState(); 
 
-  let [foodItems, setFoodItems] = useState([
-    "Dal", "Green Veggies", "Roti", "Salad", "Milk",
-  ]);
+  let [foodItems, setFoodItems] = useState([]);
 
   // console.log("After re-paint of component value of state is " + textToShow);
 
 
   const onKeyDown = (e) => {
-    if(e.keyCode == '13'){
+    // console.log(e);
+    if (e.keyCode == '13') {
       let newFoodItem = e.target.value;
-      let newItems = foodItems.
+      e.target.value = "";
+      let newItems = [...foodItems, newFoodItem];
       setFoodItems(newItems);
       console.log(`Value entered is ${newFoodItem}`);
 
@@ -37,11 +37,6 @@ function App() {
         {/* <p>{textToShow}</p> */}
         <FoodItems items={foodItems}></FoodItems>
       </Container>
-      {/* <Container>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Distinctio, sequi repudiandae libero ratione quam nisi odit fuga doloribus nesciunt dolorem velit rem fugit voluptates sit perferendis, saepe harum. Magnam, possimus?
-        </p>
-      </Container> */}
     </>
   );
 }

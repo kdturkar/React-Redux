@@ -3,7 +3,7 @@ import styles from "./Item.module.css";
 // Here we are catching foodItem as a props.
 // Props is kind of object that holds all possible parameers.
 // We can give any name to props.
-const Item = ({ foodItem, handleBuyBtn }) => {
+const Item = ({ foodItem, bought, handleBuyBtn }) => {
   // Array destructing
   // let {foodItem} = props;
 
@@ -12,7 +12,7 @@ const Item = ({ foodItem, handleBuyBtn }) => {
   // }
 
   return (
-    <li className={`${styles["li-rw"]} ${styles["list-group-item"]}`}>
+    <li className={`${styles["li-rw"]} list-group-item ${bought && 'active'}`}>
       <span className={styles["li-content"]}>{foodItem}</span>
       <button type="button" onClick={handleBuyBtn} className={`${styles["buy-btn"]} btn btn-info`}>Buy</button>
     </li>

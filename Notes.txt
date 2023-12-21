@@ -10,6 +10,8 @@
 # useState:-
  - useState hook in returns an array with two elements.
  - Ideally whatever value we get from useState it should be IMMUTABLE.
+ - When second element of useState array triggered then whole component gets re-paint.
+ - Pulling the state up means kind of Hierarchial inheritance, jab parent comp paint honga toh uske bacche bhi repaint honge.
 
 
 -- 17-fragments contains container children.
