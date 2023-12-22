@@ -1,9 +1,9 @@
 import Item from "./Item";
-const ToDoItems = ({ todoItems }) => {
+const ToDoItems = ({ todoItems, onDeleteClick }) => {
   return (
     <div className="items-container">
       {todoItems.map((item) => (
-        <Item key={item.name} todoName={item.name} todoDate={item.dueDate}></Item>
+        <Item key={item.name} deleteClick={onDeleteClick} todoName={item.name} todoDate={item.dueDate}></Item>
       ))}
     </div>
   );

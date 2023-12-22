@@ -3,22 +3,23 @@ import AppName from "./components/AppName";
 import "./App.css";
 import ToDoItems from "./components/ToDoItems";
 import { useState } from "react";
+import WelcomeMsg from "./components/WelcomeMsg";
 
 function App() {
 
   const initialTodoItems = [
-    // {
-    //   name: "Buy Milk",
-    //   dueDate: "02/11/2023",
-    // },
-    // {
-    //   name: "Buy Chips",
-    //   dueDate: "09/10/2023",
-    // },
-    // {
-    //   name: "Buy Bread",
-    //   dueDate: "10/10/2023",
-    // }
+    {
+      name: "Buy Milk",
+      dueDate: "02/11/2023",
+    },
+    {
+      name: "Buy Chips",
+      dueDate: "09/10/2023",
+    },
+    {
+      name: "Buy Bread",
+      dueDate: "10/10/2023",
+    }
   ];
 
   const [todoItems, setTodoItems] = useState(initialTodoItems);
@@ -31,12 +32,16 @@ function App() {
     setTodoItems([...todoItems, newItem]);
   }
 
+  const handleDeleteItem = (toDoItem) => {
+    const newItemList = todoItems.filter((item) => item.name !== toDoItem);
+    setTodoItems(newItemList);
+  }
+
   return (
     <center className="todo-container">
       <AppName />
       <AddToDo handleFetchData={handleFetchData}></AddToDo>
-      <ToDoItems todoItems={todoItems}></ToDoItems>
-      {todoItems.length == 0 && <p>Enjoy your day</p>}
+      {todoItems.length === 0 ? <WelcomeMsg></WelcomeMsg> : <ToDoItems todoItems={todoItems} onDeleteClick={handleDeleteItem}></ToDoItems>}
     </center>
   );
 }

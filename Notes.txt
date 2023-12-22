@@ -25,6 +25,6 @@
  - When second element of useState array triggered then whole component gets re-paint.
  - Pulling the state up means kind of Hierarchial inheritance, jab parent comp paint honga toh uske bacche bhi repaint honge.
 
-
+# filter method ek naya array banata hai, existing array ko change nahi karta hai.
 
 -- 17-fragments contains container children.
