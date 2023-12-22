@@ -12,22 +12,17 @@ function App() {
     console.log(btnName);
 
     if (btnName === 'C') {
-      setCalcValue = "";
-    }
-    else if (btnName === '=') {
-
-    }
-    else if (btnName === '/') {
-      setCalcValue = calcValue / btnName;
-    }
-    else if (btnName === '*') {
-      setCalcValue = calcValue * btnName;
-    }
-    else if (btnName === '-') {
-      setCalcValue = calcValue - btnName;
-    }
-    else {
-      setCalcValue = calcValue + btnName;
+      setCalcValue("");
+    } else if (btnName === '=') {
+      setCalcValue(String(eval(calcValue)));
+    } else if (btnName === '/') {
+      setCalcValue(calcValue + '/');
+    } else if (btnName === '*') {
+      setCalcValue(calcValue + '*');
+    } else if (btnName === '-') {
+      setCalcValue(calcValue + '-');
+    } else {
+      setCalcValue(calcValue + btnName);
     }
   };
 
