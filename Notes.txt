@@ -27,4 +27,6 @@
 
 # filter method ek naya array banata hai, existing array ko change nahi karta hai.
 
+# <React.StrictMode><App/></React.StrictMode> => Strict mode gives whatever error at compile time, when we deploy on server then it doesn't work.
+
 -- 17-fragments contains container children.

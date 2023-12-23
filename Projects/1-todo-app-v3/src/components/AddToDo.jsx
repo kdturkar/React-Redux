@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { IoMdAddCircle } from "react-icons/io";
 
 function AddToDo({ handleFetchData }) {
 
@@ -39,7 +40,7 @@ function AddToDo({ handleFetchData }) {
             onClick={() => handleAddBtn()}
             className="btn btn-success kd-btn"
           >
-            Add
+            <IoMdAddCircle />
           </button>
         </div>
       </div>
