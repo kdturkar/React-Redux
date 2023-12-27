@@ -29,4 +29,8 @@
 
 # <React.StrictMode><App/></React.StrictMode> => Strict mode gives whatever error at compile time, when we deploy on server then it doesn't work.
 
+#ReactDom:-
+- ReactDom library deals with converting updated virtual dom into Actual browser dom, and it is platform specific.
+- React library deals with only components, also it is platform independent.
+
 -- 17-fragments contains container children.
