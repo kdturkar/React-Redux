@@ -33,4 +33,8 @@
 - ReactDom library deals with converting updated virtual dom into Actual browser dom, and it is platform specific.
 - React library deals with only components, also it is platform independent.
 
+#Form:-
+ - Form ke andar jo bhi button hota hai wo by default submit type ka hota hai.
+
+
 -- 17-fragments contains container children.
