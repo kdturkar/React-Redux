@@ -35,6 +35,7 @@
 
 #Form:-
  - Form ke andar jo bhi button hota hai wo by default submit type ka hota hai.
-
+ 
+ - input field me agar hum value attribute use karte hai toh wo 2 way binding hota hai.
 
 -- 17-fragments contains container children.
