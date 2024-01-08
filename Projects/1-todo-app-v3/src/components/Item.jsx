@@ -14,6 +14,6 @@ function Item({ todoName, todoDate, deleteClick }) {
         </div>
       </div>
     </div>
-  );
+  );  
 }
 export default Item;

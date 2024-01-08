@@ -33,6 +33,7 @@ function App() {
   }
 
   const handleDeleteItem = (toDoItem) => {
+    // To delete item
     const newItemList = todoItems.filter((item) => item.name !== toDoItem);
     setTodoItems(newItemList);
   }
