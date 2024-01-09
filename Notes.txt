@@ -38,4 +38,10 @@
  
  - input field me agar hum value attribute use karte hai toh wo 2 way binding hota hai.
 
--- 17-fragments contains container children.
+#useContext:-
+ - We will use useContext when state is used in multiple components.
+
+#useReducer:-
+ - Use when the logic to maintain state is complex.
+ - Reducer is a pure function matlab isko bahar wale functions se kuch kena dena nahi hota.
+ - Complicated state management work we shifted in store folder and App component works related to UI only.
