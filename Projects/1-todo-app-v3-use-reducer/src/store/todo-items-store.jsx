@@ -4,13 +4,13 @@ export const TodoItemsContext = createContext({
   // for autocomplete we use just str
   todoItems: [],
   addNewItem: () => { },
-  deleteItem: () => { }
+  deleteItem: () => { },
 });
 
 const todoItemReducer = (currentTodoItems, action) => {
   let newTodoItems = currentTodoItems;
   if (action.type === 'NEW_ITEM') {
-    newTodoItems = [...currentTodoItems, { name: action.payload.itemName, dueDate: action.payload.itemDate }];
+    newTodoItems = [...currentTodoItems, { name: action.payload.itemName, dueDate: action.payload.itemDate },];
   } else if (action.type === 'DELETE_ITEM') {
     newTodoItems = currentTodoItems.filter((item) => item.name !== action.payload.itemName);
   }
