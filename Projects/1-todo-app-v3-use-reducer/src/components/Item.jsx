@@ -1,9 +1,9 @@
 import { useContext } from "react";
 import { MdDelete } from "react-icons/md";
-import TodoItemsContext from "../store/todo-items-store";
+import { TodoItemsContext } from "../store/todo-items-store";
 
 function Item({ todoName, todoDate }) {
-  const { deleteItem } = useContext(TodoItemsContext)
+  const { deleteItem } = useContext(TodoItemsContext);
   return (
     <div className="container">
       <div className="row kd-row">

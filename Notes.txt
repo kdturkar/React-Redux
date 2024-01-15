@@ -3,6 +3,7 @@
 - Falsy values: - Null, Undefined, empty, zero etc.
 - If I want to write JS code in jsx we write it inside {}.
 - Inline arrow functions are less efficient than separate functions in jsx.
+- Closing tag jsx me dena anivarya hai, HTML me chal jaata.
 
 
 # States & Props:-
@@ -40,6 +41,7 @@
 
 #useContext:-
  - We will use useContext when state is used in multiple components.
+ - If function is not export default only export then have to use {} braces while import.
 
 #useReducer:-
  - Use when the logic to maintain state is complex.

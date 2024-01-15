@@ -1,12 +1,11 @@
 import React, { useState, useRef, useContext } from "react";
 import { IoMdAddCircle } from "react-icons/io";
-import TodoItemsContext from "../store/todo-items-store";
+import { TodoItemsContext } from "../store/todo-items-store";
 
 function AddToDo() {
   const toDoNameElement = useRef();
   const todoDateElement = useRef();
-
-  const {addNewItem} = useContext(TodoItemsContext);
+  const { addNewItem } = useContext(TodoItemsContext);
 
   const handleAddBtn = (e) => {
     e.preventDefault(); // Server ko data nahi bhejta, to ab item immediately gayab nahi hota

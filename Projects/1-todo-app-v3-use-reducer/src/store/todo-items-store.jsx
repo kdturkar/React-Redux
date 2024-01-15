@@ -2,6 +2,7 @@ import { createContext, useReducer } from "react";
 
 export const TodoItemsContext = createContext({
   // for autocomplete we use just str
+  // Default str
   todoItems: [],
   addNewItem: () => { },
   deleteItem: () => { },
@@ -18,7 +19,9 @@ const todoItemReducer = (currentTodoItems, action) => {
 }
 
 const TodoItemsContextProvider = ({ children }) => {
+
   const [todoItems, dispatchTodoItems] = useReducer(todoItemReducer, []);
+
   const addNewItem = (itemName, itemDate) => {
     const newActionItem = {
       type: "NEW_ITEM",
@@ -29,6 +32,7 @@ const TodoItemsContextProvider = ({ children }) => {
     }
     dispatchTodoItems(newActionItem);
   }
+
   const deleteItem = (todoItemName) => {
     const deleteActionItem = {
       type: "DELETE_ITEM",
@@ -38,6 +42,7 @@ const TodoItemsContextProvider = ({ children }) => {
     }
     dispatchTodoItems(deleteActionItem);
   }
+
   return <TodoItemsContext.Provider value={
     {
       todoItems,
