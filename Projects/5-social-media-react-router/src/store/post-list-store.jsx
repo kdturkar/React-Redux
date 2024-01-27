@@ -1,16 +1,17 @@
-import { createContext, useReducer, useCallback } from "react";
+import { createContext, useReducer, useCallback, useState, useEffect } from "react";
 
 
 const DEFAULT_CONTEXT = {
   postList: [],
+  fetching: false,
   addPost: () => { },
-  addInitialPost: () => { },
   deletePost: () => { }
 }
 
 export const PostCreateContext = createContext(DEFAULT_CONTEXT);
 
 const postListReducer = (currentPostList, action) => {
+  console.log(action)
   let newPostList = currentPostList;
   if (action.type === 'DELETE_POST') {
     newPostList = currentPostList.filter((item) => item.id !== action.payload.postId);
@@ -25,19 +26,31 @@ const postListReducer = (currentPostList, action) => {
 const PostListProvider = ({ children }) => {
 
   const [postList, dispatchPost] = useReducer(postListReducer, []);
+  const [fetching, setFetching] = useState(false);
 
-  const addPost = (userId, title, content, reaction, tags) => {
-    console.log(`${userId} ${title} ${content} ${reaction} ${tags}`);
+  // #Pro
+  useEffect(() => {
+    setFetching(true);
+    const controller = new AbortController();
+    const signal = controller.signal;
+    fetch('https://dummyjson.com/posts', { signal })
+      .then((res) => res.json())
+      .then((data) => {
+        addInitialPost(data.posts);
+        setFetching(false)
+      }
+      )
+    return () => {
+      console.log("Jab component marne ki kagaar pe honga tab return honga");
+      controller.abort();
+    }
+  }, [])
+
+  const addPost = (post) => {
+    console.log("addPost called");
     const addPostAction = {
       type: "ADD_POST",
-      payload: {
-        id: Date.now(),
-        userId: userId,
-        title: title,
-        body: content,
-        reactions: reaction,
-        tags: tags
-      }
+      payload: post,
     }
     dispatchPost(addPostAction);
   }
@@ -51,9 +64,9 @@ const PostListProvider = ({ children }) => {
     })
   }
 
-  const arr = [56,87,21,982];
-  const sortedArr = useMemo(() => arr.sort(), [])
-  console.log(sortedArr);
+  // const arr = [56,87,21,982];
+  // const sortedArr = useMemo(() => arr.sort(), [])
+  // console.log(sortedArr);
 
   const deletePost = useCallback(
     (postId) => {
@@ -72,8 +85,8 @@ const PostListProvider = ({ children }) => {
   return <PostCreateContext.Provider value={{
     postList: postList,
     addPost: addPost,
-    addInitialPost: addInitialPost,
     deletePost: deletePost,
+    fetching: fetching,
   }}>
     {children}
   </PostCreateContext.Provider>
