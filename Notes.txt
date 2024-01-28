@@ -53,3 +53,10 @@
  #UseCallback:-
  - Consider a scenario where you have a parent component and a child component. The parent component renders the child component and passes a callback function as a prop to the child component. Now, if the callback function is created inline in the parent component, it will be recreated on every render of the parent component. This can lead to unnecessary re-renders of the child component, impacting performance.
  Using useCallback can help address this issue by memoizing the callback function.
+
+
+# React hooks:-
+ useState, useRef, useEffect, useCallback, useContext, useReducer, useMemo
+
+# React-Router hooks:-
+ useNavigate, useLoaderData, useActionData
