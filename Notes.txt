@@ -44,6 +44,7 @@
 #useContext:-
  - We will use useContext when state is used in multiple components.
  - If function is not export default only export then have to use {} braces while import.
+ - default export file 1 hi hoti hai.
 
 #useReducer:-
  - Use when the logic to maintain state is complex.
@@ -60,3 +61,6 @@
 
 # React-Router hooks:-
  useNavigate, useLoaderData, useActionData
+
+
+# store is immutable.
